@@ -1,39 +1,20 @@
-//alternate letter caps(Vul)
-/*
-   input --> boys don't cry are not they?
-   output-->BoYs DoN't CrY aRe NoT tHeY?
-*/
+#include<stdio.h>
+//WAP to concatenate 2 string
 #include<stdio.h>
 void main()
 {
-    char x[20];
-    int i,j,len;
-    printf("Enter the Stirng = ");
+    char x[20],v[20],c[20];
+    int i,j,k,sp=0,vo=0,co=0;
+    printf("Enter the String= ");
     gets(x);
-    printf("String = %s\n",x);
+    printf("Enter the String = %s\n",x);
     for(i=0;x[i]!='\0';i++)
-    {
-        len++;
-        if(x[i]==' ')
-            len--;
-        if(len%2==0)
-        {
-            
-            if(x[len]>=97 && x[len]<=122)
-               x[len]=x[len]-32;
-        }
-        }
-  
-    printf("%s",x);    
+        if(x[i]>=65 && x[i]<=90)
+            x[i]=x[i]+32;
+    for(j=0,k=0,i=0;x[i]!='\0';i++)
+        (x[i]=='a' || x[i]=='e' || x[i]=='i' || x[i]=='o' || x[i]=='u') ? (v[k++]=x[i]) && vo++:(x[i]==' ') ? sp++ :(c[j++]=x[i]) && co++;
+    v[k]='\0';
+    c[j]='\0';
+    printf("Vowel = %s\nConsonant = %s",v,c);
+    printf("No of Vowel = %d\nNo of Space = %d\nNo of Consonant = %d",vo,sp,co);
 }
-/*
-        if(x[i]==' ')
-          {
-             if(x[i-1]>=65 && x[i-1]<=90)
-               continue;
-          }
-        else if(i%2==0)
-        {
-            if(x[i]>=97 && x[i]<=122)
-               x[i]=x[i]-32;
-        }*/

@@ -7,23 +7,28 @@
 void main()
 {
     char x[20];
-    int i,j,len=-1;
-    printf("Enter the Stirng = ");
+    int i,j,len=0;
+    printf("Enter the String = ");
     gets(x);
     printf("String = %s\n",x);
     printf("String will be = \n");
     for(i=0;x[i]!='\0';i++)
     {
-        if(x[i]!=' ')
-        {
-            len++;
-            if(len%2==1)
-                if(x[i]>=97 && x[i]<=122)
-                    printf("%c",x[len]-32);
-        }  
+        if(x[i]==' ')
+         {
+            printf("%c",x[i]);
+            len=i+1;
+            continue;
+         }
+        if(len%2==1)
+            //if(x[len]>=97 && x[len]<=122)
+                printf("%c",x[len]-32); 
+        else
+                printf("%c",x[len]);
+        len++;
     }
   
-    printf("%s",x);    
+    printf("\n%s",x);    
 }
 /*
         if(x[i]==' ')

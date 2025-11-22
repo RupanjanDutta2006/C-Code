@@ -19,7 +19,6 @@ void main()
             break;
         }
     }
-    for()
     for(i=0;x[i]!='\0';i++)
     {
         if(i==0)

@@ -16,26 +16,20 @@ void main()
         if(i%2==0)
             if(x[i]>=97 && x[i]<=122)
                x[i]=x[i]-32;
+        
         if(x[i]==' ')
+               continue;
+        else if(i%2==0)
         {
-            j=i;
-            if(x[j-1]>=97 && x[j+1]<=122)
-                j++;
-            if(j%2==1)
-            {
-                if(x[j]>=97 && x[j]<=122)
-                    x[j]=x[j]-32;
-            }
-        }
-    }    
+            if(x[i]>=97 && x[i]<=122)
+               x[i]=x[i]-32;
+        } 
+    }   
     printf("%s",x);    
 }
 /*
         if(x[i]==' ')
-          {
-             if(x[i-1]>=65 && x[i-1]<=90)
                continue;
-          }
         else if(i%2==0)
         {
             if(x[i]>=97 && x[i]<=122)
