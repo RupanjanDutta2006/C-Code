@@ -4,7 +4,7 @@ void main()
     char x[100];
     int i, sp = 0, vo = 0, co = 0;
     printf("Enter the String = ");
-    fgets(x, sizeof(x), stdin);
+    gets(x);
     for(i = 0; x[i] != '\0'; i++)
         if(x[i] == '\n')
             x[i] = '\0';
