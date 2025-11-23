@@ -5,9 +5,6 @@ void main()
     int i, sp = 0, vo = 0, co = 0;
     printf("Enter the String = ");
     gets(x);
-    for(i = 0; x[i] != '\0'; i++)
-        if(x[i] == '\n')
-            x[i] = '\0';
     printf("Entered String = %s\n", x);
     for(i = 0; x[i] != '\0'; i++) 
         if(x[i] >= 'A' && x[i] <= 'Z')
