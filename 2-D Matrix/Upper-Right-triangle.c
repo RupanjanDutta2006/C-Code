@@ -1,8 +1,8 @@
-//Lower Left triangle
+//Upper right triangle
 /*
-    1
-    4   5
-    7   8   9
+    1   2   3
+        5   6
+            9
 */
 #include<stdio.h>
 void main()
@@ -31,12 +31,12 @@ void main()
                 printf("%d ",a[i][j]);
                 printf("\n");
         }
-        //Lower Left triangle
-        printf("Lower Left Triangle\n");
+        //Upper Right triangle
+        printf("Upper Right Triangle\n");
         for(i=0;i<r;i++)
         {
             for(j=0;j<c;j++)
-                (i>=j)?printf("%d ",a[i][j]):printf("  ");
+                (i<=j)?printf("%d ",a[i][j]):printf("  ");
             printf("\n");
         }
     }
