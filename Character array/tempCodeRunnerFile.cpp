@@ -1,20 +1,21 @@
-#include<stdio.h>
-//WAP to concatenate 2 string
+/*WAP to print acromatic string
+Input--> Rupanjan Dutta
+Output-->R.K. Dutta
+*/
 #include<stdio.h>
 void main()
 {
-    char x[20],v[20],c[20];
-    int i,j,k,sp=0,vo=0,co=0;
-    printf("Enter the String= ");
+    char x[100];
+    int i,len=0;
+    printf("Enter the String = ");
     gets(x);
-    printf("Enter the String = %s\n",x);
+    printf("The Acromatic String is = %c.",(x[0]>=65 && x[0]<=90)?x[0]:x[0]-32);
     for(i=0;x[i]!='\0';i++)
-        if(x[i]>=65 && x[i]<=90)
-            x[i]=x[i]+32;
-    for(j=0,k=0,i=0;x[i]!='\0';i++)
-        (x[i]=='a' || x[i]=='e' || x[i]=='i' || x[i]=='o' || x[i]=='u') ? (v[k++]=x[i]) && vo++:(x[i]==' ') ? sp++ :(c[j++]=x[i]) && co++;
-    v[k]='\0';
-    c[j]='\0';
-    printf("Vowel = %s\nConsonant = %s",v,c);
-    printf("No of Vowel = %d\nNo of Space = %d\nNo of Consonant = %d",vo,sp,co);
+        if(x[i]==' ')
+        {
+            printf(" %c.",(x[i+1]>=65 && x[i+1]<=90)?x[i+1]:x[i+1]-32);
+            continue;
+        }
+    for(i=i+2;x[i]!='\0';i++)
+        printf("%c",(x[i]>='a' && x[i]<='z')?x[i]:x[i]+32);
 }

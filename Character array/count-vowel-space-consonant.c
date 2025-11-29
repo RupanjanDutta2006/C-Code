@@ -4,10 +4,7 @@ void main()
     char x[100];
     int i, sp = 0, vo = 0, co = 0;
     printf("Enter the String = ");
-    fgets(x, sizeof(x), stdin);
-    for(i = 0; x[i] != '\0'; i++)
-        if(x[i] == '\n')
-            x[i] = '\0';
+    gets(x);
     printf("Entered String = %s\n", x);
     for(i = 0; x[i] != '\0'; i++) 
         if(x[i] >= 'A' && x[i] <= 'Z')

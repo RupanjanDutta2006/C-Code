@@ -5,7 +5,7 @@ int main()
 {
     int a, x, c = 0, s = 0, p, rem;
     printf("Enter the No=");
-    scanf("%d", &a);
+    scanf("%d",&a);
     x = a;
     while (x > 0)
     {
@@ -17,12 +17,13 @@ int main()
     {
         rem = x % 10;
         p = pow(rem, c);
+        printf("%d\n",p);
         s = s + p;
         x = x / 10;
     }
     if (s == a)
-        printf("%d is a Armstrong No", a);
+        printf("\n%d is a Armstrong No", a);
     else
-        printf("%d is NOT a Armstrong No", a);
+        printf("\n%d is NOT a Armstrong No", a);
     return 0;
 }

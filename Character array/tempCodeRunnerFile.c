@@ -1,20 +1,14 @@
+/*WAP to print the even index
+*/
 #include<stdio.h>
 void main()
 {
-    char x[100], v[100], c[100];
-    int i, j = 0, k = 0, sp = 0, vo = 0, co = 0;
+    char x[100];
+    int i,len=0,k=0,sp=0;
     printf("Enter the String = ");
-    fgets(x, sizeof(x), stdin);
-    for(i = 0; x[i] != '\0'; i++) {
-        if(x[i] == '\n')
-            x[i] = '\0';
-    }
-    printf("Entered String = %s\n", x);
-    for(i = 0; x[i] != '\0'; i++) {
-        if(x[i] >= 'A' && x[i] <= 'Z')
-            x[i] = x[i] + 32;
-    }
-    for(i = 0; x[i] != '\0'; i++)
-        (x[i] == ' ')?sp++:(x[i] == 'a' || x[i] == 'e' || x[i] == 'i' || x[i] == 'o' || x[i] == 'u') ?vo++: co++;
-    printf("Number of Vowels = %d\nNumber of Spaces = %d\nNumber of Consonants = %d\n", vo, sp, co);
+    gets(x);
+    printf("The output will be = ");
+    for(i=0;x[i]!='\0';i++)
+        if(i%2==1)
+            printf("%c",x[i]);
 }
