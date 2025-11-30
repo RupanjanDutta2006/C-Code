@@ -2,7 +2,7 @@
 #include<stdio.h>
 void main()
 {
-    int a,x,rem,s=0;
+    int ,x,rem,s=0;
     printf("Enter the No = ");
     scanf("%d",&a);
     x=a;
@@ -12,7 +12,6 @@ void main()
         s=s*10+rem;
         x=x/10;
     }
-    x=a;
     if (x==s)
         printf("%d is a Palindrome no ",x);
     else
