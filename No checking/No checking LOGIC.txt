@@ -1,0 +1,9 @@
+NO Checking:
+1.Palindrome no
+(real no and reverse of the no is same.eg:121)
+2.Prime no
+(divisable by 1 and the no itself)
+3.Co-prime no
+(gcd of 2 prime no are 1.eg:17,7)
+4.Twin-prime no
+(common difference b/w 2 prime no is 2)

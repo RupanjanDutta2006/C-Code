@@ -7,15 +7,10 @@ void main()
     scanf("%d",&a);
     k=a;
     for(i=2;i<=a/2;i++)
-    {
         if(k%i==0)
         {
             c=1;
             break;
         }
-    }
-    if(c==0)
-        printf("%d is a Prime no",a);
-    else
-        printf("%d is NOT a Prime no",a);
+    printf("%d is%sa Prime no ",a,(c==0)?(" "):(" NOT "));
 }

@@ -1,32 +1,28 @@
-#include <stdio.h>
-
-void main() {
-    int a, i, j, temp;
-    printf("Enter the RANGE = ");
-    scanf("%d", &a);
-    int arr[a];
-    for(i = 0; i < a; i++) {
-        printf("Enter the value of arr[%d] = ", i);
-        scanf("%d", &arr[i]);
-    }
-    printf("The values in the array are:\n");
-    for(i = 0; i < a; i++)
-        printf("%d ", arr[i]);
-
-    // Selection sort:
-    for(i = 0; i < a - 1; i++) {
-        int min_idx = i;
-        for(j = i + 1; j < a; j++) {
-            if(arr[j] < arr[min_idx])
-                min_idx = j;
+//WAP to insert -1 after an element if it is divisible by 5
+#include<stdio.h>
+void main()
+{
+    int i,n,x;
+    printf("Enter the Range = ");
+    scanf("%d",&n);
+    int a[n];
+    //input
+    for(i=0;i<n;i++)
+    {
+       printf("Enter the No. = ");
+       scanf("%d",&x);
+       if(x%5==0)
+        {
+            a[i]=-1;
+            a[++i]=x;
+            n++;
         }
-        // Swap minimum element with the first unsorted element
-        temp = arr[min_idx];
-        arr[min_idx] = arr[i];
-        arr[i] = temp;
+        else
+        {
+            a[i]=x;
+        }
     }
-
-    printf("\nSorted array is = \n");
-    for(i = 0; i < a; i++)
-        printf("%d\n", arr[i]);
+    //output
+    for(i=0;i<n;i++)
+      printf("%d ",a[i]);
 }

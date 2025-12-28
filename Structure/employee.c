@@ -18,7 +18,7 @@ struct employee
 };
 void main()
 {
-    int i,n;
+    int i,n,temp;
     printf("Enter the No of Employee = ");
     scanf("%d",&n);
     struct employee em[n];
@@ -57,4 +57,21 @@ void main()
         printf("%d\t%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%s\n",em[i].id,em[i].nm,em[i].bs,em[i].da,em[i].ta,em[i].hra,em[i].ma,em[i].gs,em[i].pf,em[i].net,em[i].ds);
     }
     printf("--------------------------------------------------------------------------------------------------------------\n");
+    for(i=0;i<n-1;i++)
+    {
+        if(em[i].gs<em[i+1].gs)
+        {
+                temp=em[i].gs;
+                em[i].gs=em[i+1].gs;
+                em[i+1].gs=temp;
+        }
+    }
+    printf("\nSorted List\n");
+    printf("--------------------------------------------------------------------------------------------------------------\n");
+    printf("ID\tNAME\tB.SAL\tDA\tTA\tHRA\tMA\tG.SAL\tPF\tNET\tDESIGNATION\n");
+    printf("--------------------------------------------------------------------------------------------------------------\n");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\t%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%s\n",em[i].id,em[i].nm,em[i].bs,em[i].da,em[i].ta,em[i].hra,em[i].ma,em[i].gs,em[i].pf,em[i].net,em[i].ds);
+    }
 }
