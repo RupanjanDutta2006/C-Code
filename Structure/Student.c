@@ -3,7 +3,7 @@
 struct student
 {
     int roll_no,c,ph,mt,dr,t,avg;
-    char nm[20],grd;
+    char nm[20],grd;//ASMITA
 };
 void main()
 {
