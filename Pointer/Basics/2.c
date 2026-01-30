@@ -9,4 +9,5 @@ void main()
     printf("X's ADDress = %u\n",&o);
     printf("X's ADDress = %u\n",&p);
     printf("P's ADDress = %u\n",&p);
+    //souvik
 }
