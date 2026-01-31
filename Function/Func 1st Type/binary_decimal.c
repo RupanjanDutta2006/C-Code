@@ -1,0 +1,21 @@
+//wap to convert binary decimal  1st type
+#include<stdio.h>
+void convert();
+void main()
+{
+    convert();
+}
+void convert()
+{
+      int n,x,rem,s=0,i,j,p;
+      printf("Enter the No. = ");
+      scanf("%d",&n);
+      for(x=n,j=1;n>0;n=n/10,j=j*2)
+      {
+          rem=n%10;
+          p=rem*j;
+          s=s+p;
+    
+      }
+      printf("Binary No. = %d Equivalent Decimal No. = %d",x,s);
+}
