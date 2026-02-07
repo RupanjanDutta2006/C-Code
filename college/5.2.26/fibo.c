@@ -1,0 +1,20 @@
+//Write a recursive function to find the Fibonacci series upto user given n-terms.
+#include<stdio.h>
+int fibo(int n)
+{
+    if(n==0)
+        return 0;
+    else if(n==1)
+        return 1;
+    else
+        return fibo(n-1)+fibo(n-2);
+}
+void main()
+{
+    int n, i;
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+    printf("Fibonacci series: ");
+    for(i=0; i<n; i++)
+        printf("%d ", fibo(i));
+}
